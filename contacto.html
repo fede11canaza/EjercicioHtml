@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto · Refugio Patitas Felices</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sitio de Adopción de Mascotas</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <p>Completá el formulario y nos comunicaremos a la brevedad para asesorarte sobre adopciones, donaciones o
+                voluntariados.</p>
+            <form action="https://labsys.frc.utn.edu.ar/dds-express/eco" method="POST">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan García" required>
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="juan@email.com" required>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 351 000-0000">
+                </fieldset>
+                <fieldset>
+                    <legend>Consulta</legend>
+                    <label for="fecha">Fecha de consulta *</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <label for="motivo">Motivo del contacto *</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">— Seleccioná un motivo —</option>
+                        <option value="adopcion">Quiero adoptar</option>
+                        <option value="donacion">Quiero hacer una donación</option>
+                        <option value="voluntariado">Postularme como voluntario</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"
+                        placeholder="Escribí tu mensaje aquí... (mínimo 20 caracteres)" minlength="20" required>
+</textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferencias de Adopción</legend>
+                    <p>¿Qué tipo de mascota te interesa?</p>
+                    <!-- Grupo de Radio Buttons (comparten el mismo 'name' para que solo se elija uno) -->
+                    <input type="radio" id="pref-perro" name="preferencia_mascota" value="perro">
+                    <label for="pref-perro">Perro</label>
+
+                    <input type="radio" id="pref-gato" name="preferencia_mascota" value="gato">
+                    <label for="pref-gato">Gato</label>
+
+                    <input type="radio" id="pref-indistinto" name="preferencia_mascota" value="indistinto">
+                    <label for="pref-indistinto">Me es indistinto / No busco adoptar hoy</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Términos y Condiciones</legend>
+                    <!-- Checkbox obligatorio -->
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones del refugio *</label>
+                </fieldset>
+                <button type="submit">Enviar mensaje</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Federico Canaza · 2026</p>
+    </footer>
+</body>
+
+</html>
